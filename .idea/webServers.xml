@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0cc20992-e0bc-4f6c-af9a-100bb987d36d" name="HumoService">
+        <fileTransfer rootFolder="/home/nursulton.x/HumoService" accessType="SFTP" host="192.168.202.36" port="22" sshConfigId="62d4f942-eb83-4da7-ad32-6ad15a5aec53" sshConfig="nursulton.x@192.168.202.36:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

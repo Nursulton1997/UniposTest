@@ -1,0 +1,11 @@
+asgiref==3.5.2
+attrs==22.1.0
+Django==4.1
+jsonrpcserver==5.0.8
+jsonschema==4.10.2
+OSlash==0.6.3
+pyrsistent==0.18.1
+sqlparse==0.4.2
+typing_extensions==4.3.0
+tzdata==2022.2
+urllib3==1.26.11
