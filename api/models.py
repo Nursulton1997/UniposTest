@@ -28,3 +28,42 @@ class AccessToken(models.Model):
 
     def __str__(self):
         return self.user.username
+
+
+class CreatedUpdated(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(null=True)
+
+    def save(self):
+        self.updated_at = timezone.now()
+        return super().save()
+
+    class Meta:
+        abstract = True
+
+
+class Epos(CreatedUpdated):
+    user = models.CharField(max_length=200, null=True)
+    type = models.IntegerField(null=True)
+    merchant = models.CharField(max_length=50, null=True)
+    terminal = models.CharField(max_length=20, null=True)
+    point_code = models.CharField(max_length=50, null=True)
+    purpose = models.CharField(max_length=50, null=True)
+    originator = models.CharField(max_length=50, null=True)
+    center_id = models.CharField(max_length=50, null=True)
+    status = models.BooleanField(default=False)
+
+
+class Payments(CreatedUpdated):
+    user = models.CharField(max_length=100, null=True)
+    ext_id = models.CharField(max_length=250, null=True)
+
+
+class Transfers(CreatedUpdated):
+    user = models.CharField(max_length=100, null=True)
+    ext_id = models.CharField(max_length=250, null=True)
+
+
+class ToCard(CreatedUpdated):
+    user = models.CharField(max_length=100, null=True)
+    ext_id = models.CharField(max_length=250, null=True)
